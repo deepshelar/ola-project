@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UPI Payment | Ride App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: url("https://images.unsplash.com/photo-1502877338535-766e1452684a")
+                        no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .upi-box {
+            background: rgba(0, 0, 0, 0.78);
+            padding: 35px;
+            width: 380px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            color: #fff;
+        }
+
+        .upi-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .fare-summary {
+            background: rgba(255,255,255,0.1);
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+
+        .fare-summary p {
+            display: flex;
+            justify-content: space-between;
+            margin: 6px 0;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .upi-apps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .upi-apps div {
+            flex: 1;
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            padding: 10px;
+            margin: 0 5px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .upi-apps div:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .pay-btn {
+            width: 100%;
+            padding: 12px;
+            background: #00c853;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .pay-btn:hover {
+            background: #00a846;
+        }
+
+        .secure-text {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 12px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="upi-box">
+    <h2>UPI Payment</h2>
+
+    <div class="fare-summary">
+        <p><span>Ride Fare</span><span>₹220</span></p>
+        <p><span>Taxes</span><span>₹20</span></p>
+        <hr>
+        <p><strong>Total</strong><strong>₹240</strong></p>
+    </div>
+
+    <div class="upi-apps">
+        <div>Google Pay</div>
+        <div>PhonePe</div>
+        <div>Paytm</div>
+    </div>
+
+    <div class="input-group">
+        <label>Enter UPI ID</label>
+        <input type="text" placeholder="yourname@upi">
+    </div>
+
+    <button class="pay-btn">Pay ₹240</button>
+
+    <div class="secure-text">
+        🔒 You will be redirected to your UPI app
+    </div>
+</div>
+
+</body>
+</html>
