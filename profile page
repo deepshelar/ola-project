@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User Profile | Ride App</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    background:url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c")
+    no-repeat center/cover;
+    color:white;
+}
+
+/* Header */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:18px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.65);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#00c853;
+}
+
+nav a{
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+}
+
+nav a:hover{
+    color:#00c853;
+}
+
+/* Profile Section */
+.profile-container{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgba(0,0,0,0.55);
+    padding-top:70px;
+}
+
+.profile-box{
+    background:rgba(0,0,0,0.75);
+    width:420px;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.6);
+    text-align:center;
+}
+
+.profile-img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#00c853;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    font-weight:bold;
+    margin:0 auto 15px;
+}
+
+.profile-box h2{
+    margin-bottom:5px;
+}
+
+.profile-box p{
+    font-size:14px;
+    opacity:0.9;
+    margin-bottom:20px;
+}
+
+/* Details */
+.detail{
+    background:rgba(255,255,255,0.1);
+    padding:12px;
+    border-radius:6px;
+    margin-bottom:12px;
+    text-align:left;
+}
+
+.detail span{
+    font-size:12px;
+    opacity:0.8;
+}
+
+/* Buttons */
+.btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:5px;
+    background:#00c853;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.btn:hover{
+    background:#00a846;
+}
+
+.logout{
+    background:transparent;
+    border:2px solid #ff5252;
+    color:#ff5252;
+}
+
+.logout:hover{
+    background:#ff5252;
+    color:white;
+}
+
+/* Responsive */
+@media(max-width:500px){
+    .profile-box{
+        width:90%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">RideApp</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="history.html">Trips</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+</header>
+
+<section class="profile-container">
+    <div class="profile-box">
+        <div class="profile-img">D</div>
+        <h2>deep shelar </h2>
+        <p>deepshelar0@email.com</p>
+
+        <div class="detail">
+            <span>Phone</span><br>
+            +91 98765 43210
+        </div>
+
+        <div class="detail">
+            <span>Total Rides</span><br>
+            25
+        </div>
+
+        <div class="detail">
+            <span>Wallet Balance</span><br>
+            ₹350
+        </div>
+
+        <button class="btn">Edit Profile</button>
+        <button class="btn logout">Logout</button>
+    </div>
+</section>
+
+</body>
+</html>
