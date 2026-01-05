@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ride App | Book Your Ride</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    background:url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c")
+    no-repeat center/cover;
+    color:white;
+}
+
+/* Header */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:18px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.65);
+    z-index:10;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#00c853;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:15px;
+}
+
+nav a:hover{
+    color:#00c853;
+}
+
+/* Hero Section */
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(0,0,0,0.55);
+    padding-top:70px;
+}
+
+.hero-box{
+    background:rgba(0,0,0,0.7);
+    padding:35px;
+    width:420px;
+    border-radius:12px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.6);
+}
+
+.hero-box h1{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.hero-box p{
+    text-align:center;
+    font-size:14px;
+    margin-bottom:20px;
+    opacity:0.9;
+}
+
+/* Inputs */
+.input-group{
+    margin-bottom:15px;
+}
+
+.input-group label{
+    font-size:13px;
+    display:block;
+    margin-bottom:5px;
+}
+
+.input-group input,
+.input-group select{
+    width:100%;
+    padding:10px;
+    border-radius:5px;
+    border:none;
+    outline:none;
+}
+
+/* Fare */
+.fare{
+    text-align:center;
+    margin:15px 0;
+    font-size:16px;
+    background:rgba(255,255,255,0.1);
+    padding:10px;
+    border-radius:6px;
+}
+
+/* Buttons */
+.btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:5px;
+    background:#00c853;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#00a846;
+}
+
+.small-text{
+    text-align:center;
+    font-size:12px;
+    margin-top:10px;
+    opacity:0.8;
+}
+
+/* Responsive */
+@media(max-width:500px){
+    .hero-box{
+        width:90%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">RideApp</div>
+    <nav>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Signup</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-box">
+        <h1>Book a Ride</h1>
+        <p>Fast • Safe • Affordable</p>
+
+        <div class="input-group">
+            <label>Pickup Location</label>
+            <input type="text" placeholder="Enter pickup location">
+        </div>
+
+        <div class="input-group">
+            <label>Drop Location</label>
+            <input type="text" placeholder="Enter drop location">
+        </div>
+
+        <div class="input-group">
+            <label>Select Vehicle</label>
+            <select>
+                <option>Mini</option>
+                <option>Sedan</option>
+                <option>SUV</option>
+            </select>
+        </div>
+
+        <div class="fare">
+            Estimated Fare: <strong>₹220</strong>
+        </div>
+
+        <button class="btn">Find Ride</button>
+
+        <div class="small-text">
+            No surge pricing • 24/7 availability
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
