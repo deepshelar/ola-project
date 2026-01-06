@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Taxi Booking Website</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+nav{
+    background:rgba(0,0,0,0.75);
+    padding:15px;
+    text-align:center;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:10;
+}
+
+nav button{
+    padding:10px 18px;
+    margin:5px;
+    border:none;
+    cursor:pointer;
+    background:#ffc107;
+    font-weight:bold;
+    border-radius:5px;
+}
+
+/* COMMON PAGE STYLE */
+.page{
+    display:none;
+    height:100vh;
+    color:white;
+    text-align:center;
+    padding-top:120px;
+}
+
+.box{
+    background:rgba(0,0,0,0.6);
+    width:360px;
+    margin:auto;
+    padding:25px;
+    border-radius:12px;
+}
+
+input, select{
+    width:95%;
+    padding:10px;
+    margin:8px 0;
+    border:none;
+    border-radius:5px;
+}
+
+button.action{
+    padding:10px;
+    width:95%;
+    background:#ffc107;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+/* BACKGROUNDS */
+#register{
+    background:url("https://www.shutterstock.com/image-vector/mobile-app-taxi-service-yellow-260nw-2602441711.jpg") center/cover;
+}
+#login{
+    background:url("https://images.unsplash.com/photo-1519681393784-d120267933ba") center/cover;
+}
+#home{
+    background:url("https://images.unsplash.com/photo-1542362567-b07e54358753") center/cover;
+}
+#booking{
+    background:url("https://images.unsplash.com/photo-1525609004556-c46c7d6cf023") center/cover;
+}
+#payment{
+    background:url("https://images.unsplash.com/photo-1589758438368-0ad531db3366") center/cover;
+}
+#profile{
+    background:url("https://www.shutterstock.com/image-vector/taxi-ser…e-online-concept-application-260nw-1722074203.jpg") center/cover;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <button onclick="showPage('register')">Register</button>
+    <button onclick="showPage('login')">Login</button>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('booking')">Booking</button>
+    <button onclick="showPage('payment')">Payment</button>
+    <button onclick="showPage('profile')">Profile</button>
+</nav>
+
+<!-- HOME PAGE -->
+<div id="home" class="page">
+    <div class="box">
+        <h2>Book Your Taxi</h2><br>
+        <input type="text" placeholder="Pickup Location">
+        <input type="text" placeholder="Drop Location">
+        <button class="action" onclick="showPage('booking')">Book Ride</button>
+    </div>
+</div>
+
+<!-- LOGIN PAGE -->
+<div id="login" class="page">
+    <div class="box">
+        <h2>User Login</h2><br>
+        <input type="text" placeholder="Mobile Number">
+        <input type="password" placeholder="Password">
+        <button class="action">Login</button>
+        <p style="margin-top:10px;">New user?
+            <a href="#" onclick="showPage('register')" style="color:#ffc107;">Register</a>
+        </p>
+    </div>
+</div>
+
+<!-- REGISTRATION PAGE -->
+<div id="register" class="page">
+    <div class="box">
+        <h2>User Registration</h2><br>
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Mobile Number">
+        <input type="password" placeholder="Create Password">
+        <input type="password" placeholder="Confirm Password">
+        <button class="action">Register</button>
+    </div>
+</div>
+
+<!-- BOOKING PAGE -->
+<div id="booking" class="page">
+    <div class="box">
+        <h2>Select Ride Type</h2><br>
+        <select>
+            <option>Mini - ₹150</option>
+            <option>Sedan - ₹250</option>
+            <option>SUV - ₹350</option>
+            <option>two wheeler -₹100</option>
+        </select>
+        <button class="action" onclick="showPage('payment')">Continue</button>
+    </div>
+</div>
+
+<!-- PAYMENT PAGE -->
+<div id="payment" class="page">
+    <div class="box">
+        <h2>Payment Method</h2><br>
+        <select>
+            <option>UPI</option>
+            <option>Debit Card</option>
+            <option>Credit Card</option>
+            <option>Cash</option>
+        </select>
+        <button class="action">Pay Now</button>
+    </div>
+</div>
+
+<!-- PROFILE PAGE -->
+<div id="profile" class="page">
+    <div class="box">
+        <h2>User Profile</h2><br>
+        <p>Name: deep shelar </p>
+        <p>email address: shelardeep0@gmail.com</p>
+        <p>Mobile: 9254467888</p>
+        <p>Total Rides: 5</p>
+    </div>
+</div>
+
+<script>
+function showPage(page){
+    let pages = document.querySelectorAll('.page');
+    pages.forEach(p => p.style.display = "none");
+    document.getElementById(page).style.display = "block";
+}
+showPage('home');
+</script>
+
+</body>
+</html>
